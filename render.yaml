@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: diabscope
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn DiabScope.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: DiabScope.settings
+      - key: SECRET_KEY
+        value: your-secret-key
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
