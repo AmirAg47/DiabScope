@@ -1,0 +1,397 @@
+ 
+ -------------- celery@DESKTOP-CKDNCC1 v5.4.0 (opalescent)
+--- ***** ----- 
+-- ******* ---- Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35 2025-05-27 16:12:27
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         ccspredictor:0x7faeaaf378d0
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 8 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . predictor.tasks.run_prediction_task
+
+[2025-05-27 16:12:28,926: WARNING/MainProcess] /home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-05-27 16:12:29,028: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2025-05-27 16:12:29,030: WARNING/MainProcess] /home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-05-27 16:12:29,034: INFO/MainProcess] mingle: searching for neighbors
+[2025-05-27 16:12:30,054: INFO/MainProcess] mingle: all alone
+[2025-05-27 16:12:30,075: INFO/MainProcess] celery@DESKTOP-CKDNCC1 ready.
+[2025-05-27 16:12:30,176: INFO/MainProcess] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] received
+[2025-05-27 16:12:30,209: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:12:30,315: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:12:30,317: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:12:30,407: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:12:30,418: INFO/MainProcess] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] received
+[2025-05-27 16:12:35,350: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:12:35,387: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:12:35,388: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:12:35,434: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:12:35,447: INFO/MainProcess] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] received
+[2025-05-27 16:12:40,411: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:12:40,451: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:12:40,452: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:12:40,485: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:12:40,498: INFO/MainProcess] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] received
+[2025-05-27 16:12:45,487: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:12:45,535: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:12:45,535: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:12:45,536: ERROR/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[1b35f78c-675c-4d7a-8bd8-4972130ff26b] raised unexpected: NameError("name 'tf' is not defined")
+Traceback (most recent call last):
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/tasks.py", line 46, in run_prediction_task
+    raise self.retry(exc=e)
+          ^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/amir/DiabScope/predictor/tasks.py", line 38, in run_prediction_task
+    predictions_df = predict_data(model_path, new_df, scaler, gender_encoder)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/utils.py", line 118, in predict_data
+    interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
+                  ^^
+NameError: name 'tf' is not defined
+[2025-05-27 16:13:15,089: INFO/MainProcess] Task predictor.tasks.run_prediction_task[589b8eee-9058-436a-99e8-0599db5d1ee3] received
+[2025-05-27 16:13:20,030: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:13:20,094: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:13:20,096: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:13:20,157: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[589b8eee-9058-436a-99e8-0599db5d1ee3] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:13:20,171: INFO/MainProcess] Task predictor.tasks.run_prediction_task[589b8eee-9058-436a-99e8-0599db5d1ee3] received
+[2025-05-27 16:13:25,140: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:13:25,178: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:13:25,178: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:13:25,219: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[589b8eee-9058-436a-99e8-0599db5d1ee3] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:13:25,233: INFO/MainProcess] Task predictor.tasks.run_prediction_task[589b8eee-9058-436a-99e8-0599db5d1ee3] received
+[2025-05-27 16:13:30,213: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:13:30,250: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:13:30,251: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:13:30,253: ERROR/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[589b8eee-9058-436a-99e8-0599db5d1ee3] raised unexpected: NameError("name 'tf' is not defined")
+Traceback (most recent call last):
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/tasks.py", line 46, in run_prediction_task
+    raise self.retry(exc=e)
+          ^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/amir/DiabScope/predictor/tasks.py", line 38, in run_prediction_task
+    predictions_df = predict_data(model_path, new_df, scaler, gender_encoder)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/utils.py", line 118, in predict_data
+    interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
+                  ^^
+NameError: name 'tf' is not defined
+[2025-05-27 16:16:33,714: INFO/MainProcess] Task predictor.tasks.run_prediction_task[e413ec7e-3e65-49a1-abd9-93e0a00bc9d2] received
+[2025-05-27 16:16:38,663: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:16:38,802: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:16:38,804: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:16:38,879: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[e413ec7e-3e65-49a1-abd9-93e0a00bc9d2] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:19:03,089: INFO/MainProcess] Task predictor.tasks.run_prediction_task[413887db-ff93-4f4d-bdb9-d72507a80aa1] received
+[2025-05-27 16:19:03,266: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:19:03,499: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:19:03,505: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:19:03,620: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[413887db-ff93-4f4d-bdb9-d72507a80aa1] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:19:03,628: INFO/MainProcess] Task predictor.tasks.run_prediction_task[413887db-ff93-4f4d-bdb9-d72507a80aa1] received
+[2025-05-27 16:19:08,561: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:19:08,607: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:19:08,608: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:19:08,647: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[413887db-ff93-4f4d-bdb9-d72507a80aa1] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:19:08,664: INFO/MainProcess] Task predictor.tasks.run_prediction_task[413887db-ff93-4f4d-bdb9-d72507a80aa1] received
+[2025-05-27 16:19:13,642: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:19:13,679: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:19:13,680: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:19:13,719: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[413887db-ff93-4f4d-bdb9-d72507a80aa1] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:21:43,463: INFO/MainProcess] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] received
+[2025-05-27 16:21:43,582: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:21:43,765: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:21:43,768: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:21:43,857: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:21:43,873: INFO/MainProcess] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] received
+[2025-05-27 16:21:48,796: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:21:48,835: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:21:48,835: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:21:48,877: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:21:48,887: INFO/MainProcess] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] received
+[2025-05-27 16:21:53,861: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:21:53,903: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:21:53,904: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:21:53,956: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:21:53,971: INFO/MainProcess] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] received
+[2025-05-27 16:21:58,930: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:21:58,971: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:21:58,972: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:21:58,976: ERROR/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[9313e3a7-da33-45c4-af06-679d3398e421] raised unexpected: NameError("name 'tf' is not defined")
+Traceback (most recent call last):
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/tasks.py", line 46, in run_prediction_task
+    raise self.retry(exc=e)
+          ^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/amir/DiabScope/predictor/tasks.py", line 38, in run_prediction_task
+    predictions_df = predict_data(model_path, new_df, scaler, gender_encoder)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/utils.py", line 118, in predict_data
+    interpreter = tf.lite.Interpreter(model_path=tflite_model_path)
+                  ^^
+NameError: name 'tf' is not defined
+[2025-05-27 16:23:41,604: INFO/MainProcess] Task predictor.tasks.run_prediction_task[d2789f52-057b-4db4-ba98-f474b52c6794] received
+[2025-05-27 16:23:42,087: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:23:42,618: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:23:42,625: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:23:42,847: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[d2789f52-057b-4db4-ba98-f474b52c6794] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:31:08,585: INFO/MainProcess] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] received
+[2025-05-27 16:31:08,790: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:31:09,060: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:31:09,063: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:31:09,153: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:31:09,166: INFO/MainProcess] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] received
+[2025-05-27 16:31:14,104: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:31:15,954: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:31:15,960: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:31:16,069: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:31:16,092: INFO/MainProcess] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] received
+[2025-05-27 16:31:21,006: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:31:21,045: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:31:21,046: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:31:21,085: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:31:21,098: INFO/MainProcess] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] received
+[2025-05-27 16:31:26,080: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:31:26,118: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:31:26,118: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:31:26,120: ERROR/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[c984371b-3faa-4b48-b150-ab1c8104ccbe] raised unexpected: NameError("name 'tf' is not defined")
+Traceback (most recent call last):
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/tasks.py", line 46, in run_prediction_task
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/amir/DiabScope/predictor/tasks.py", line 38, in run_prediction_task
+  File "/home/amir/DiabScope/predictor/utils.py", line 118, in predict_data
+    interpreter = tflite.Interpreter(model_path=tflite_model_path)
+                  ^^
+NameError: name 'tf' is not defined
+[2025-05-27 16:37:58,794: INFO/MainProcess] Task predictor.tasks.run_prediction_task[979a8248-5299-4801-8a14-824d6cc2d47e] received
+[2025-05-27 16:37:59,469: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:38:00,286: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:38:00,345: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:38:00,739: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[979a8248-5299-4801-8a14-824d6cc2d47e] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:38:00,775: INFO/MainProcess] Task predictor.tasks.run_prediction_task[979a8248-5299-4801-8a14-824d6cc2d47e] received
+[2025-05-27 16:38:05,509: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:38:05,561: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:38:05,563: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:38:05,673: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[979a8248-5299-4801-8a14-824d6cc2d47e] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 16:38:05,709: INFO/MainProcess] Task predictor.tasks.run_prediction_task[979a8248-5299-4801-8a14-824d6cc2d47e] received
+[2025-05-27 16:38:10,741: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 16:38:10,792: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 16:38:10,792: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 16:38:10,876: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[979a8248-5299-4801-8a14-824d6cc2d47e] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:05:12,997: INFO/MainProcess] Task predictor.tasks.run_prediction_task[631bc516-7e06-49d8-a065-0a8f7276749c] received
+[2025-05-27 18:05:13,612: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:05:14,372: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:05:14,379: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:05:14,660: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[631bc516-7e06-49d8-a065-0a8f7276749c] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:05:14,773: INFO/MainProcess] Task predictor.tasks.run_prediction_task[631bc516-7e06-49d8-a065-0a8f7276749c] received
+[2025-05-27 18:05:19,489: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:05:19,538: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:05:19,539: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:05:19,629: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[631bc516-7e06-49d8-a065-0a8f7276749c] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:05:19,679: INFO/MainProcess] Task predictor.tasks.run_prediction_task[631bc516-7e06-49d8-a065-0a8f7276749c] received
+[2025-05-27 18:05:24,595: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:05:24,634: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:05:24,634: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:05:27,145: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[631bc516-7e06-49d8-a065-0a8f7276749c] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:19:52,287: INFO/MainProcess] Task predictor.tasks.run_prediction_task[4d191ff5-ede5-40f1-ac00-c39f00e2ac6f] received
+[2025-05-27 18:19:52,604: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:19:53,255: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:19:53,265: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:19:53,476: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[4d191ff5-ede5-40f1-ac00-c39f00e2ac6f] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:20:12,391: INFO/MainProcess] Task predictor.tasks.run_prediction_task[d9b7c03a-c60b-4a4f-872e-e5e3bc942966] received
+[2025-05-27 18:20:12,421: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:20:12,474: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:20:12,475: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:20:12,519: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[d9b7c03a-c60b-4a4f-872e-e5e3bc942966] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:20:57,053: INFO/MainProcess] Task predictor.tasks.run_prediction_task[a554c624-9370-42b8-9738-94580ae78ee0] received
+[2025-05-27 18:20:57,068: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:20:57,130: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:20:57,132: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:20:57,169: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[a554c624-9370-42b8-9738-94580ae78ee0] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:25:50,290: INFO/MainProcess] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] received
+[2025-05-27 18:25:50,346: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:25:50,509: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:25:50,511: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:25:50,569: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:25:50,583: INFO/MainProcess] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] received
+[2025-05-27 18:25:55,535: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:25:55,591: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:25:55,591: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:25:55,605: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:25:55,607: INFO/MainProcess] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] received
+[2025-05-27 18:26:00,606: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:26:00,663: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:26:00,663: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:26:00,680: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] retry: Retry in 5s: NameError("name 'tf' is not defined")
+[2025-05-27 18:26:00,683: INFO/MainProcess] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] received
+[2025-05-27 18:26:05,678: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:26:05,740: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:26:05,740: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:26:05,751: ERROR/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[00dc134a-2a29-47f8-8c32-abf78a75d03b] raised unexpected: NameError("name 'tf' is not defined")
+Traceback (most recent call last):
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amir/DiabScope/predictor/tasks.py", line 46, in run_prediction_task
+  File "/home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/amir/DiabScope/predictor/tasks.py", line 38, in run_prediction_task
+  File "/home/amir/DiabScope/predictor/utils.py", line 118, in predict_data
+    interpreter = tflite.Interpreter(model_path=tflite_model_path)
+                  ^^
+NameError: name 'tf' is not defined
+[2025-05-27 18:28:03,032: INFO/MainProcess] Task predictor.tasks.run_prediction_task[2bd22e53-436f-4478-96f3-b3874a0975a2] received
+[2025-05-27 18:28:03,039: INFO/ForkPoolWorker-8] Prediction task started.
+[2025-05-27 18:28:03,116: WARNING/ForkPoolWorker-8] /home/amir/DiabScope/venv/lib/python3.11/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but MinMaxScaler was fitted with feature names
+  warnings.warn(
+
+[2025-05-27 18:28:03,118: ERROR/ForkPoolWorker-8] Prediction task failed: name 'tf' is not defined
+[2025-05-27 18:28:03,134: INFO/ForkPoolWorker-8] Task predictor.tasks.run_prediction_task[2bd22e53-436f-4478-96f3-b3874a0975a2] retry: Retry in 5s: NameError("name 'tf' is not defined")
+
+Restarting celery worker (/home/amir/DiabScope/venv/bin/celery -A ccspredictor worker --loglevel=info)
+ 
+ -------------- celery@DESKTOP-CKDNCC1 v5.4.0 (opalescent)
+--- ***** ----- 
+-- ******* ---- Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35 2025-05-27 18:33:59
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         ccspredictor:0x7feb16727a10
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 8 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . predictor.tasks.run_prediction_task
+
+[2025-05-27 18:34:08,489: WARNING/MainProcess] /home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-05-27 18:34:08,595: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2025-05-27 18:34:08,607: WARNING/MainProcess] /home/amir/DiabScope/venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2025-05-27 18:34:08,641: INFO/MainProcess] mingle: searching for neighbors
+[2025-05-27 18:34:09,673: INFO/MainProcess] mingle: all alone
+[2025-05-27 18:34:09,686: INFO/MainProcess] celery@DESKTOP-CKDNCC1 ready.
